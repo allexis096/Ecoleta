@@ -13,8 +13,8 @@ function populateUFs() {
 populateUFs()
 
 function getCities() {
-    const citySelect = document.querySelector('select[name=city]')
-    const stateInput = document.querySelector('input[name=state]')
+    const citySelect = document.querySelector('[name=city]')
+    const stateInput = document.querySelector('[name=state]')
 
     const ufValue = event.target.value
 
@@ -31,7 +31,7 @@ function getCities() {
     .then(cities => {
 
         for(city of cities) {
-            citySelect.innerHTML += `<option value='${city.id}'>${city.nome}</option>`
+            citySelect.innerHTML += `<option value='${city.nome}'>${city.nome}</option>`
         }
         citySelect.disabled = false
     })
